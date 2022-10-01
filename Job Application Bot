@@ -13,24 +13,22 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 import time
 
-chrome_driver_path = 'C:/Users/Admin/chromedriver.exe'
+chrome_driver_path = ''
 
 service = Service(executable_path=chrome_driver_path)
 
 chromedriver = webdriver.Chrome(service=service)
 
-chromedriver.get(url='https://www.linkedin.com/jobs/search/'
-                        '?currentJobId=3190282534&f_AL=true&f_E=1%2C2&f_JT=F%2CC&geoId=102257491&'
-                        'location=London%2C%20England%2C%20United%20Kingdom&refresh=true&sortBy=R')
+chromedriver.get(url='')
 
 chromedriver.implicitly_wait(time_to_wait=5)
 
 chromedriver.find_element(by=By.LINK_TEXT, value='Sign in').send_keys(Keys.ENTER)
 
 username = chromedriver.find_element(by=By.ID, value='username')
-username.send_keys('pantelis.kaliviotis@gmail.com')
+username.send_keys('')
 password = chromedriver.find_element(by=By.ID, value='password')
-password.send_keys('opkodikos12!')
+password.send_keys('')
 
 chromedriver.find_element(by=By.XPATH, value='//*[@id="organic-div"]/form/div[3]/button').click()
 
