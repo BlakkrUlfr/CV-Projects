@@ -4,13 +4,13 @@ from twilio.rest import Client
 
 import smtplib
 
-TWILIO_SID = 'AC4e679b8ab9199a40811114babf418edd'
-TWILIO_AUTH_TOKEN = '3fcba1cef9eb94099d20f36f9dafb675'
-TWILIO_VIRTUAL_NUMBER = '+19706654775'
-TWILIO_VERIFIED_NUMBER = '07759340651'
+TWILIO_SID = ''
+TWILIO_AUTH_TOKEN = ''
+TWILIO_VIRTUAL_NUMBER = ''
+TWILIO_VERIFIED_NUMBER = ''
 
-my_email = 'ogamwtomounithspanagias@gmail.com'
-my_password = 'opkodikos12'
+my_email = ''
+my_password = ''
 
 class NotificationManager:
     # This class is responsible for sending notifications with the deal flight details.
