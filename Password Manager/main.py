@@ -81,7 +81,7 @@ email_username_label = Label(text='Email/Username:')
 email_username_label.grid(column=0, row=2)
 
 email_username_entry = Entry(width=52)
-email_username_entry.insert(0, string='pantelis.kaliviotis@gmail.com')
+email_username_entry.insert(0, string='')
 email_username_entry.grid(column=1, row=2, columnspan=2)
 
 password_label = Label(text='Password:')
