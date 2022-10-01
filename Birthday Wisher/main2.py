@@ -6,11 +6,11 @@ import random
 
 import smtplib
 
-my_gmail = "ogamwtomounithspanagias@gmail.com"
-my_gmail_password = "opkodikos12"
+my_gmail = ""
+my_gmail_password = ""
 
-my_yahoo_email = 'pan_pan37@yahoo.com'
-sending_from_yahoo_password = 'iyqzymdfwudgdojh'
+my_yahoo_email = ''
+sending_from_yahoo_password = ''
 
 today = (datetime.now().month, datetime.now().day)
 
