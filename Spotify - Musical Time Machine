@@ -11,8 +11,8 @@ date_of_choice = input('Which year do you want to travel to? Type the date in th
 
 URL = f'https://www.billboard.com/charts/hot-100/{date_of_choice}'
 
-SPOTIPY_CLIENT_ID = 'd336b16de3c3462fad6270adaf5c5400'
-SPOTIPY_CLIENT_SECRET = '889beef0b5744f6fa20dd92c9b4bd4cc'
+SPOTIPY_CLIENT_ID = ''
+SPOTIPY_CLIENT_SECRET = ''
 SPOTIPY_REDIRECT_URI = 'http://localhost'
 
 # response = requests.get("https://www.billboard.com/charts/hot-100/" + date)
