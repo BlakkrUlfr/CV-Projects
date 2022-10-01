@@ -2,9 +2,9 @@ import requests
 
 from datetime import datetime
 
-USERNAME = 'idkwhat2type'
-TOKEN = 'Opkodikos12!'
-GRAPH_ID = 'graph0'
+USERNAME = ''
+TOKEN = ''
+GRAPH_ID = ''
 
 request_header = {
 
