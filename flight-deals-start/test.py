@@ -2,7 +2,7 @@ import requests
 
 import json
 
-TEQUILA_API_KEY = 'dWwXQmpPck3LoeT20_cUhOEzjN2pe4pB'
+TEQUILA_API_KEY = ''
 tequila_endpoint = 'https://tequila-api.kiwi.com/v2/search'
 
 location_endpoint = f"{tequila_endpoint}/locations/query"
