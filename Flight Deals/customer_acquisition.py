@@ -1,7 +1,7 @@
 import requests
 
 acquisition_sheety_endpoint = 'https://api.sheety.co/fb3565f6afb850bcc0d52f5d10622f08/flightDeals/users'
-BEARER_TOKEN = 'CHEAPFLIGHTSBEARERTOKEN'
+BEARER_TOKEN = ''
 sheety_headers = {
 
     'Authorization': f'Bearer {BEARER_TOKEN}'
