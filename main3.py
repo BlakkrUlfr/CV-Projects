@@ -4,9 +4,9 @@ import requests
 
 from twilio.rest import Client
 
-EQUITY_API_KEY = 'HX5P748BUV6W5WD0'
+EQUITY_API_KEY = ''
 
-NEWS_API_KEY = '752730f723a74c638958334f9931c175'
+NEWS_API_KEY = ''
 
 EQUITY = "TSLA"
 
@@ -30,9 +30,9 @@ newsapi_params = {
     'apiKey': NEWS_API_KEY
 }
 
-TWILIO_ACCOUNT_SID = 'AC4e679b8ab9199a40811114babf418edd'
+TWILIO_ACCOUNT_SID = ''
 
-TWILIO_AUTH_TOKEN = '3fcba1cef9eb94099d20f36f9dafb675'
+TWILIO_AUTH_TOKEN = ''
 
 daily_time_series_response = requests.get(url=EQUITY_ENDPOINT_URL, params=alpha_vantage_api_params)
 stock_price_data = daily_time_series_response.json()['Time Series (Daily)']
@@ -69,8 +69,8 @@ if abs(percentage) > 5:
         message = client.messages \
             .create(
                 body=article,
-                from_='+19706654775',
-                to='+4407759340651'
+                from_='',
+                to=''
         )
 
         print(message.sid)
