@@ -1,0 +1,75 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+
+from selenium.webdriver.support import expected_conditions as EC
+
+from selenium.common.exceptions import NoSuchElementException
+
+# from selenium.webdriver.chrome.options import Options
+
+from selenium.webdriver.support.wait import WebDriverWait
+
+import time
+
+chrome_driver_path = 'C:/Users/Admin/chromedriver.exe'
+
+service = Service(executable_path=chrome_driver_path)
+
+chromedriver = webdriver.Chrome(service=service)
+
+chromedriver.get(url='https://www.linkedin.com/jobs/search/'
+                        '?currentJobId=3190282534&f_AL=true&f_E=1%2C2&f_JT=F%2CC&geoId=102257491&'
+                        'location=London%2C%20England%2C%20United%20Kingdom&refresh=true&sortBy=R')
+
+chromedriver.implicitly_wait(time_to_wait=5)
+
+chromedriver.find_element(by=By.LINK_TEXT, value='Sign in').send_keys(Keys.ENTER)
+
+username = chromedriver.find_element(by=By.ID, value='username')
+username.send_keys('pantelis.kaliviotis@gmail.com')
+password = chromedriver.find_element(by=By.ID, value='password')
+password.send_keys('opkodikos12!')
+
+chromedriver.find_element(by=By.XPATH, value='//*[@id="organic-div"]/form/div[3]/button').click()
+
+chromedriver.maximize_window()
+
+job_search_box = chromedriver.find_element(by=By.ID, value='jobs-search-box-keyword-id-ember25')
+job_search_box.send_keys("Junior Python Developer" + Keys.ENTER)
+time.sleep(5)
+
+
+# Scrolling Down
+def scroll_down():
+    search_result = chromedriver.find_element(by=By.CSS_SELECTOR,
+                                              value='#main > div > section.scaffold-layout__list > div')
+    vertical_scroll_size = 100
+    for scrollS in range(30):
+        chromedriver.execute_script(f"arguments[0].scrollTo(0, {vertical_scroll_size})", search_result)
+        vertical_scroll_size += 100
+        time.sleep(1)
+
+
+scroll_down()
+
+all_job_listings = chromedriver.find_elements(by=By.CLASS_NAME, value='job-card-list__title')
+
+# SAVE Version #2
+for job in all_job_listings:
+    print(f"Saved: {job.text}")
+    chromedriver.execute_script("arguments[0].click();", job)
+
+try:
+    save_button = WebDriverWait(driver=chromedriver, timeout=10).until(
+                                method=EC.presence_of_element_located(locator=(By.CSS_SELECTOR, '.jobs-save-button')))
+
+    chromedriver.execute_script("arguments[0].click();", WebDriverWait(chromedriver, 10).until(
+                                EC.element_to_be_clickable((By.CSS_SELECTOR, ".jobs-save-button"))))
+
+except NoSuchElementException:
+    print('No save option, skipped.')
+
+pageS = chromedriver.find_elements(by=By.CSS_SELECTOR, value='#ember302 > ul > li > button')
+print(len(pageS))
