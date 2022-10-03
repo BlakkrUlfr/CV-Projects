@@ -41,7 +41,7 @@ if will_rain:
     client = Client(account_sid, auth_token)
 
     message = client.messages \
-        .create(body="Bring an Umbrella (ella - ella)", from_='+19706654775', to='+4407759340651')
+        .create(body="Bring an Umbrella (ella - ella)", from_='', to='')
 
     print(message.status)
 
