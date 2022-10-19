@@ -47,22 +47,6 @@
 
 # Alternative Ending
 
-# for num in range(100):
-#     sleep(3)
-#     try:
-#         matched_popup = chrome_webdriver.find_element(By.XPATH, value='//*[@id="q36386411"]/div/div/div[2]/button[2]')
-#         matched_popup.click()
-#     except Exception as error:
-#         pass
-#     except ElementClickInterceptedException:
-#         chrome_webdriver.find_element(By.CSS_SELECTOR, ".itsAMatch a").click()
-#     finally:
-#         actions = ActionChains(chrome_webdriver)
-#         actions.send_keys(Keys.ARROW_RIGHT).perform()
-
-
-# Alternative Ending
-
 # for i in range(100):
 #     sleep(1)
 #     try:
