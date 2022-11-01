@@ -15,8 +15,8 @@ from time import sleep
 
 CHROME_DRIVER_PATH = "C:/Users/Admin/OneDrive/Υπολογιστής/chromedriver.exe"
 SIMILAR_ACCOUNT = 'chefsteps'
-USERNAME = 'Qwerdfasb'
-PASSWORD = 'gr-67WHj7SZDCvi'
+USERNAME = ''
+PASSWORD = ''
 
 
 class InstagramFollower:
